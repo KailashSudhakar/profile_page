@@ -1,0 +1,35 @@
+{
+  "name": "profile_page",
+  "version": "0.0.1",
+  "description": "Sample profile page",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KailashSudhakar/profile_page.git"
+  },
+  "keywords": [
+    "profile_page",
+    "kailash",
+    "sudhakar",
+    "bootstrap",
+    "angular",
+    "js",
+    "sass"
+  ],
+  "author": "Kailash Sudhakar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KailashSudhakar/profile_page/issues"
+  },
+  "homepage": "https://github.com/KailashSudhakar/profile_page#readme",
+  "devDependencies": {
+    "grunt-contrib-sass": "^1.0.0"
+  },
+  "dependencies": {
+    "grunt": "^1.0.2",
+    "grunt-contrib-watch": "^1.0.1"
+  }
+}

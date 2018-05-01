@@ -1,0 +1,168 @@
+/*
+File:style.scss
+Author: Kailash Sudhakar
+DateCreated: 01.05.2018
+Purpose: Sass source file with all the styles required for the profile page
+*/
+
+
+/*variables for the common style values*/
+$primary_blue: #16314D;
+$text_black: #000;
+$text_grey: #888;
+$text_white: #fff;
+$mobile-width: 320px;
+$tablet-width: 768px;
+$body_bg: #1D1F40;
+$banner_bg: #282A51;
+$banner_border_color: #282A51;
+$accent_color:#51dccd;
+
+/*responsive mixins*/
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: 992px) {
+    @content;
+  }
+}
+
+
+@mixin mobile {
+  @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@import url('https: //fonts.googleapis.com/css?family=Roboto:100,300,400');
+
+/*main-styling starts*/
+html {
+  font-size: 14px;
+}
+body {
+  color: $text_white;
+  font-family: 'Roboto';
+  font-weight: 300;
+  transition: 1s ease-in;
+  background:$body_bg;
+}
+
+.main-container {
+  display:flex;
+  height:100vh;
+  align-items:center;
+  width:100%;
+  float:left;
+  position:relative;
+  .main_banner {
+    width: 80%;
+    max-width: 800px;
+    min-height: 75vh;
+    position:relative;
+    margin: 0px auto;
+    background:$banner_bg;
+    border: 1px solid $banner_border_color;
+    box-shadow: 1px 1px 1px 2px $text_black;
+    border-bottom: 4px solid $accent_color;
+    @include mobile {
+      width:100%;
+      min-height:auto;
+      height:auto;
+      padding: 20px 0px 20px 0px;
+    }
+  }
+}
+
+.banner_header {
+  .prof_img_wrap {
+    position:absolute;
+    height: auto;
+    width: 320px;
+    overflow: hidden;
+    margin-top: -35px;
+    margin-left: -80px;
+    box-shadow: 1px 1px 1px 2px #000;
+    overflow:hidden;
+    .prof_img { 
+      width:100%;
+      display:block;
+    }
+    @include mobile {
+      position:relative;
+      margin-top:0px;
+      margin-left:0px;
+      width:auto;
+      height:300px;
+    }
+  }
+  .inner_content_wrap {
+    width:85%;
+    margin:0px auto;
+  }
+}
+
+.prof_title_wrap {
+  padding-top:20px;
+  padding-bottom:50px;
+  position:relative;
+  .prof_title {
+    font-size:70px;
+    line-height: 1;
+    font-family: 'Roboto';
+    max-width:300px;
+    @include mobile {
+      font-size:50px;
+    }
+    @include tablet {
+      font-size:60px;
+    }
+  }
+}
+
+.stats_row {
+  .stat_col {
+    .stat_num {
+      font-size: 30px;
+      font-style: italic;
+      padding-bottom: 5px;
+    }
+    .stat_text { 
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: $text_grey;
+    }
+  }
+}
+
+.about_row {
+  padding-top:35px;
+  .small_title {
+    font-size: 15px;
+    color: $accent_color;
+    letter-spacing: 1px;
+    padding-bottom: 5px
+  }
+  .desc {
+    font-weight: 200;
+    line-height: 1.7;
+  }
+}
+
+.btn_wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 45px;
+  padding-top: 30px;
+  .btn {
+    border-color: $accent_color;
+    color: $accent_color;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 10px;
+    &:hover {
+     color:$text_white;
+     background: $accent_color;
+   }
+  }
+}

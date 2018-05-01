@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Kailash Sudhakar | User Profile Page</title>
+</head>
+<body ng-app="userProfile">
+  <div class="container-fluid main-container">
+    <section class="main_banner">
+      <div class="banner_header">
+        <div class="row">
+          <div class="col-lg-4 col-md-4">
+            <div class="prof_img_wrap">
+              <img class="prof_img" alt="kailash_sudhakar" src="https://image.ibb.co/b0nC67/kailash1.jpg">
+            </div> <!--end prof_img_wrap-->
+          </div> <!--end col-lg-5-->
+          <div class="col-lg-8 col-md-8">
+            <div class="inner_content_wrap">
+              <div class="prof_title_wrap">
+                <div class="prof_title" ng-controller="profName">
+                  {{first_name}}
+                  {{last_name}}
+                </div>
+              </div>
+              <div class="btn_wrap">
+                <a href="http://kailash.work" target="_blank">
+                  <button type="button" class="btn btn-outline-primary">My Portfolio</button>
+                </a>
+              </div>
+              <div class="stats_row" ng-controller="profStats">
+                <div class="row">
+                  <div class="stat_col col-md-4 col-lg-4 col-4" ng-repeat='stat in statusList'>
+                    <div class="stat_num"> {{stat.sVal}}+ </div>
+                    <div class="stat_text"> {{stat.sName}} </div>
+                  </div> <!--stat_col-->
+                </div>
+              </div> <!--stats_row-->
+              <div class="about_row" ng-controller="aboutMe">
+                <div class="small_title">
+                  ABOUT
+                </div>
+                <div class="desc">
+                  {{ about_me }}
+                </div>
+              </div> <!-- about_row -->
+            </div> <!-- end inner_content_wrap -->
+          </div> <!-- end col-lg-8-->
+        </div> <!--end row-->
+      </div> <!--end banner_header-->
+    </section> <!--end main_banner-->
+  </div> <!--end container-fluid-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+  <script type="text/javascript" src="assets/js/func.js"></script>
+</body>
+</html>

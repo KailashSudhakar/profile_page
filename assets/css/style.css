@@ -1,0 +1,146 @@
+/*
+File:style.scss
+Author: Kailash Sudhakar
+DateCreated: 01.05.2018
+Purpose: Sass source file with all the styles required for the profile page
+*/
+/*variables for the common style values*/
+/*responsive mixins*/
+@import url("https: //fonts.googleapis.com/css?family=Roboto:100,300,400");
+/*main-styling starts*/
+html {
+  font-size: 14px;
+}
+
+body {
+  color: #fff;
+  font-family: 'Roboto';
+  font-weight: 300;
+  transition: 1s ease-in;
+  background: #1D1F40;
+}
+
+.main-container {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  width: 100%;
+  float: left;
+  position: relative;
+}
+.main-container .main_banner {
+  width: 80%;
+  max-width: 800px;
+  min-height: 75vh;
+  position: relative;
+  margin: 0px auto;
+  background: #282A51;
+  border: 1px solid #282A51;
+  box-shadow: 1px 1px 1px 2px #000;
+  border-bottom: 4px solid #51dccd;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .main-container .main_banner {
+    width: 100%;
+    min-height: auto;
+    height: auto;
+    padding: 20px 0px 20px 0px;
+  }
+}
+
+.banner_header .prof_img_wrap {
+  position: absolute;
+  height: auto;
+  width: 320px;
+  overflow: hidden;
+  margin-top: -35px;
+  margin-left: -80px;
+  box-shadow: 1px 1px 1px 2px #000;
+  overflow: hidden;
+}
+.banner_header .prof_img_wrap .prof_img {
+  width: 100%;
+  display: block;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .banner_header .prof_img_wrap {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 0px;
+    width: auto;
+    height: 300px;
+  }
+}
+.banner_header .inner_content_wrap {
+  width: 85%;
+  margin: 0px auto;
+}
+
+.prof_title_wrap {
+  padding-top: 20px;
+  padding-bottom: 50px;
+  position: relative;
+}
+.prof_title_wrap .prof_title {
+  font-size: 70px;
+  line-height: 1;
+  font-family: 'Roboto';
+  max-width: 300px;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .prof_title_wrap .prof_title {
+    font-size: 50px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .prof_title_wrap .prof_title {
+    font-size: 60px;
+  }
+}
+
+.stats_row .stat_col .stat_num {
+  font-size: 30px;
+  font-style: italic;
+  padding-bottom: 5px;
+}
+.stats_row .stat_col .stat_text {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #888;
+}
+
+.about_row {
+  padding-top: 35px;
+}
+.about_row .small_title {
+  font-size: 15px;
+  color: #51dccd;
+  letter-spacing: 1px;
+  padding-bottom: 5px;
+}
+.about_row .desc {
+  font-weight: 200;
+  line-height: 1.7;
+}
+
+.btn_wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 45px;
+  padding-top: 30px;
+}
+.btn_wrap .btn {
+  border-color: #51dccd;
+  color: #51dccd;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 10px;
+}
+.btn_wrap .btn:hover {
+  color: #fff;
+  background: #51dccd;
+}
+
+/*# sourceMappingURL=style.css.map */
