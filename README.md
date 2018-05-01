@@ -1,2 +1,2 @@
 # A Simple Profile Page
-A simple todo app built with Bootstrap, Angular JS and SCSS. 
+A simple profile page built with Bootstrap, Angular JS and SCSS. 
